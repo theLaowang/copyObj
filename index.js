@@ -1,12 +1,10 @@
 function copyObj(obj,target = {}){
     for(var i in obj){
         if(typeof obj[i] === 'object'){
-            //要考虑深复制问题了
+            //判断是数组或者是对象
             if(obj[i].constructor === Array){
-                //这是数组
                 target[i] =[]
             }else{
-                //这是对象
                 target[i] = {}
             }
             deepCopy(obj[i],target[i])
