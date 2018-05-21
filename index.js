@@ -7,7 +7,7 @@ function copyObj(obj,target = {}){
             }else{
                 target[i] = {}
             }
-            deepCopy(obj[i],target[i])
+            copyObj(obj[i],target[i])
         }else{
             target[i] = obj[i]
         }
